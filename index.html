@@ -118,6 +118,10 @@ footer{
   --df-messenger-user-message:#3B6D11;
   --df-messenger-title-font-color:#fff;
 }
+.topic{
+  cursor:pointer;
+}
+  
 </style>
 </head>
 <body>
@@ -133,7 +137,7 @@ footer{
 <main>
   <p class="list-title">SILAHKAN TANYA SOAL :</p>
   <div class="topics">
-    <div class="topic">
+    <div class="topic" onclick="askBot('BPJS kesehatan')" >
       <span class="main">BPJS Kesehatan (JKN)</span>
       <span class="sub">Pendaftaran dan login Mobile JKN</span>
     </div>
@@ -174,6 +178,17 @@ footer{
   agent-id="0070b94d-2551-4352-b9f0-2615afb63d53"
   language-code="id">
 </df-messenger>
+
+<script>
+function askBot(query) {
+  const bubble = document.querySelector('df-messenger-chat-bubble');
+  if (bubble) bubble.openChat();
+  setTimeout(() => {
+    const dfMessenger = document.querySelector('df-messenger');
+    dfMessenger.sendQuery(query);
+  }, 300);
+}
+</script>
 
 </body>
 </html>
