@@ -137,7 +137,7 @@ footer{
 <main>
   <p class="list-title">SILAHKAN TANYA SOAL :</p>
   <div class="topics">
-    <div class="topic" onclick="askBot('BPJS kesehatan')" >
+    <div class="topic">
       <span class="main">BPJS Kesehatan (JKN)</span>
       <span class="sub">Pendaftaran dan login Mobile JKN</span>
     </div>
@@ -179,25 +179,5 @@ footer{
   language-code="id">
 </df-messenger>
   
-<script>
-function askBot(query) {
-  const dfMessenger = document.querySelector('df-messenger');
-  const chatEl = dfMessenger.shadowRoot.querySelector('df-messenger-chat');
-  const inputWrapper = chatEl.shadowRoot.querySelector('df-messenger-user-input');
-  const inputBox = inputWrapper.shadowRoot.querySelector('input, textarea');
-
-  inputBox.value = query;
-  inputBox.dispatchEvent(new Event('input', { bubbles: true }));
-
-  const enterEvent = new KeyboardEvent('keydown', {
-    key: 'Enter',
-    code: 'Enter',
-    keyCode: 13,
-    bubbles: true
-  });
-  inputBox.dispatchEvent(enterEvent);
-}
-</script>
-
 </body>
 </html>
