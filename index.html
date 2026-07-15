@@ -178,15 +178,24 @@ footer{
   agent-id="0070b94d-2551-4352-b9f0-2615afb63d53"
   language-code="id">
 </df-messenger>
-
+  
 <script>
 function askBot(query) {
-  const bubble = document.querySelector('df-messenger-chat-bubble');
-  if (bubble) bubble.openChat();
-  setTimeout(() => {
-    const dfMessenger = document.querySelector('df-messenger');
-    dfMessenger.sendQuery(query);
-  }, 300);
+  const dfMessenger = document.querySelector('df-messenger');
+  const chatEl = dfMessenger.shadowRoot.querySelector('df-messenger-chat');
+  const inputWrapper = chatEl.shadowRoot.querySelector('df-messenger-user-input');
+  const inputBox = inputWrapper.shadowRoot.querySelector('input, textarea');
+
+  inputBox.value = query;
+  inputBox.dispatchEvent(new Event('input', { bubbles: true }));
+
+  const enterEvent = new KeyboardEvent('keydown', {
+    key: 'Enter',
+    code: 'Enter',
+    keyCode: 13,
+    bubbles: true
+  });
+  inputBox.dispatchEvent(enterEvent);
 }
 </script>
 
