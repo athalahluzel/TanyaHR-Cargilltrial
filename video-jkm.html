@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaminan Kematian (JKM) - Asisten Virtual HR</title>
+  <style>
+    :root{
+      --green-900:#173404;
+      --green-700:#27500A;
+      --cream:#F4F1E9;
+      --ink:#1C2417;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:'Georgia','Times New Roman',serif;
+      color:var(--ink);
+      background:var(--green-900);
+      min-height:100vh;
+    }
+    header{ padding:16px 20px; }
+    header a.back{
+      color:#fff;
+      text-decoration:none;
+      font-family:Arial,sans-serif;
+      font-size:14px;
+    }
+    header a.back:hover{ text-decoration:underline; }
+    main{
+      max-width:760px;
+      margin:0 auto;
+      padding:10px 20px 60px;
+    }
+    h1{
+      color:#fff;
+      font-size:24px;
+      font-weight:400;
+      margin:0 0 24px;
+      text-align:center;
+    }
+    p.vidlabel{
+      color:var(--cream);
+      font-family:Arial,sans-serif;
+      font-size:14px;
+      font-weight:700;
+      margin:20px 0 8px;
+    }
+    .video-wrapper{
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 4px 20px rgba(0,0,0,0.4);
+      background:#000;
+    }
+    .video-wrapper video{
+      width:100%;
+      display:block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back" href="index.html">&larr; Kembali ke daftar topik</a>
+  </header>
+  <main>
+    <h1>Jaminan Kematian (JKM)</h1>
+    
+    <p class="vidlabel">Cara Klaim Jaminan Kematian</p>
+    <div class="video-wrapper">
+      <video controls>
+        <source src="videos/jkm.mp4" type="video/mp4">
+        Browser kamu tidak mendukung pemutaran video.
+      </video>
+    </div>
+
+  </main>
+</body>
+</html>
