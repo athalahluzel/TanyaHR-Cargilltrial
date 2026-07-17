@@ -50,7 +50,6 @@ Chatbot ini menjawab pertanyaan karyawan dengan mengarahkan mereka ke video tuto
 - **Dialogflow Messenger** — widget chat yang ditampilkan di halaman web
 - **HTML/CSS** — struktur dan tampilan halaman web
 - **GitHub Pages** — hosting gratis untuk halaman web dan video
-- **Telegram Bot API** — integrasi chatbot ke platform Telegram
 
 ## Alur Percakapan
 
